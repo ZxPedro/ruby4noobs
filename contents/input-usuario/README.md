@@ -1,18 +1,24 @@
 # Input do Usuário
 
-Em um programa Ruby, muitas vezes teremos que pegar o input do usuário, que é algo que o usuário irá digitar e passar como uma variável do nosso programa, em Ruby, para pegar o input do usuário, ou stdin (STandart INput) é:
+Em um programa, muitas vezes temos que pegar o input do usuário, ou seja, dados que o usuário digitar para que passemos como uma variável do nosso programa. Em Ruby, fazemos isso com o método **gets**, que lê os dados diretamente do stdin ou Standard Input:
 
 ```ruby
-print "Qual é o seu nome?: "
-nome = gets.chomp
+print "Qual é o seu nome?"
+nome = gets
 
 puts "Olá #{nome}, tudo bem?"
 ```
 
-execute este código na sua máquina, agora tente retirar o .chomp do gets.
+O código acima exibe uma mensagem que diz "Qual é o seu nome" e espera por uma entrada do usuário, o que o usuário digitar será salvo na variável `nome` e será impresso na tela uma mesagem com o nome que foi inserido.
 
-Sem o .chomp, após o input do usuário for pego, haverá a quebra de uma linha, que dependendo da sua intenção, pode ser algo negativo, é por isso que na maioria dos casos usamos sempre o .chomp diretamente no gets.
+O método gets por padrão captura alguns caracteres de escape como o "\n" (conhecido como quebra de linha ou nova linha), o que dependendo do caso pode ser algo negativo em nosso programa.
 
-## Proximo =>
+Para removermos estes caracteres da entrada do usuário, utilizamos o método **gets** com o **chomp**, desta forma:
+
+```ruby
+nome = gets.chomp
+```
+
+## Próximo =>
 
 [Estruturas de Repetição](../repeticoes/README.md)
